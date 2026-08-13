@@ -1,0 +1,209 @@
+
+ZALOPAY · AI SECURITY
+
+ZALOPAY · AI SECURITY
+⚠ CẢNH BÁO NGUY HIỂM! HÃY DỪNG LẠI VÀ ĐỌC!
+8 RỦI RO BẢO MẬT KHI THI CÔNG AI HẰNG NGÀY CÓ THỂ ẢNH HƯỞNG ĐẾN ZALOPAY STARTER
+01 — CHẠY LỆNH DO AI ĐỀ XUẤT MÀ CHƯA KIỂM TRA
+Mức độ thường gặp trong công việc: 5/5
+TÌNH HUỐNG
+AI đưa cho bạn một command hoặc package để sửa lỗi. Vì muốn xử lý nhanh, bạn copy lệnh vào terminal hoặc cài package ngay mà chưa kiểm tra nó thực sự làm gì.
+DIỄN BIẾN
+AI đề xuất một package không tồn tại.
+Kẻ xấu đăng ký package đó trước và đưa mã độc vào.
+Bạn vô tình cài hoặc chạy package bằng quyền đang có trên máy.
+Mã độc có thể từ đó đánh cắp credential, token, source code hoặc dữ liệu mà bạn có quyền truy cập.
+Hậu quả
+Thiết bị và các tài khoản đang đăng nhập trên máy bị xâm nhập.
+Credential, token, source code hoặc dữ liệu nội bộ bị đánh cắp.
+Mã độc có thể tiếp tục ảnh hưởng đến repo, pipeline hoặc hệ thống mà bạn có quyền truy cập.
+
+GHI NHẬN NỘI BỘ
+Đã ghi nhận trường hợp chạy trực tiếp output do AI tạo ra mà không kiểm chứng, dẫn đến thiết bị bị xâm nhập và dữ liệu trên máy bị thu thập trái phép.
+CASE THỰC TẾ
+Nghiên cứu của Spracklen et al. (USENIX Security 2025) phân tích 2,23 triệu đoạn code do 16 mô hình AI tạo ra và phát hiện 19,7% có ít nhất một package không tồn tại; tỷ lệ này ở các mô hình thương mại khoảng 5%.
+Đáng chú ý, 43% tên package không tồn tại được AI đề xuất lặp lại y nguyên qua 10 lần chạy, tạo cơ hội để kẻ xấu đăng ký các package này trước.
+Spracklen et al., USENIX Security 2025
+NƯỚC ĐI AN TOÀN
+✓ Kiểm tra command: nếu lệnh có curl ... | bash, iwr ... | iex, hoặc tải và chạy code trực tiếp → không chạy ngay, kiểm tra lệnh đang làm gì trước.
+✓ Kiểm tra package: nếu AI gợi ý package mới → kiểm tra package có thật, publisher là ai, ngày phát hành, lịch sử cập nhật và repository trước khi install.
+✓ Kiểm tra quyền và hành vi của lệnh: nếu lệnh có sudo, eval, base64, chmod +x hoặc yêu cầu ghi/chạy file ngoài thư mục dự án → dừng lại và kiểm tra trước khi chạy.
+
+02 — CÀI EXTENSION CHỈ VÌ NHIỀU LƯỢT TẢI
+Mức độ thường gặp trong công việc: 5/5
+TÌNH HUỐNG
+Một extension được quảng cáo giúp tóm tắt, hỗ trợ coding hoặc tăng năng suất. Bạn thấy extension có nhiều lượt cài, giao diện uy tín và xuất hiện trên marketplace hoặc mục “Featured”, nên bạn dễ nghĩ rằng nó đã được kiểm tra và an toàn để sử dụng.
+DIỄN BIẾN
+Extension giả mạo một công cụ AI quen thuộc.
+Extension yêu cầu quyền truy cập rộng — như đọc các tab, clipboard hoặc workspace.
+Khi được cấp quyền, extension âm thầm thu thập nội dung chat, source code hoặc tài liệu.
+Một bản cập nhật sau đó có thể bổ sung mã độc, ngay cả khi phiên bản ban đầu chưa có.
+Hậu quả
+Lộ nội dung trao đổi với AI, source code và tài liệu nội bộ.
+Token phiên, thông tin đăng nhập hoặc dữ liệu trình duyệt bị đánh cắp.
+Extension độc hại có thể ảnh hưởng đến nhiều người dùng và thiết bị nếu được cài đặt rộng rãi.
+CASE THỰC TẾ
+OX Security phát hiện hai extension Chrome giả mạo AITOPIA, một công cụ AI có thật, có khả năng thu thập nội dung các cuộc trò chuyện với ChatGPT và DeepSeek, trong đó có thể chứa source code, thông tin kinh doanh và trao đổi nội bộ.
+Hai extension này có tổng cộng hơn 900.000 lượt tải. Đáng chú ý, một trong hai còn được Google Chrome gắn nhãn “Featured”.
+OX Security, 12/2025 · Microsoft Security Blog, 3/2026
+NƯỚC ĐI AN TOÀN
+✓ Kiểm tra publisher: có phải nhà phát hành chính thức không? Xem ngày phát hành, lịch sử cập nhật và nguồn mã công khai nếu có.
+✓ Kiểm tra quyền truy cập: nếu extension yêu cầu quyền đọc toàn bộ workspace, clipboard hoặc mọi tab mà không thực sự cần thiết → đừng tự cài, gửi Security review trước.
+✓ Dọn extension không còn dùng: gỡ những extension không cần thiết và thường xuyên kiểm tra lại các extension đang sử dụng.
+
+03 — ĐƯA FILE, CODE HOẶC DỮ LIỆU NHẠY CẢM VÀO PUBLIC AI
+Mức độ thường gặp trong công việc: 5/5
+TÌNH HUỐNG
+Bạn upload log, hợp đồng, spreadsheet, ảnh chụp màn hình hoặc paste code thật vào AI để phân tích, tóm tắt hoặc debug nhanh hơn.
+DIỄN BIẾN
+Bạn đưa dữ liệu thật vào public AI
+Dữ liệu được gửi đến hệ thống của bên cung cấp AI để xử lý.
+Bạn không còn trực tiếp kiểm soát dữ liệu được lưu ở đâu, ai có thể truy cập và được giữ lại trong bao lâu.
+Nếu tài khoản, hệ thống, log hoặc cấu hình của bên cung cấp có vấn đề, dữ liệu có thể bị lộ.
+Hậu quả
+Dữ liệu nội bộ có thể được chia sẻ hoặc lưu trữ ngoài phạm vi kiểm soát của Zalopay.
+Có thể vi phạm nghĩa vụ bảo vệ dữ liệu cá nhân, cam kết với đối tác/khách hàng hoặc chính sách nội bộ.
+Sự cố có thể kéo theo chi phí điều tra, khắc phục, thông báo và ảnh hưởng đến niềm tin của khách hàng.
+CASE THỰC TẾ
+1/5 tổ chức trong nghiên cứu của IBM từng gặp sự cố dữ liệu liên quan đến Shadow AI — tức việc sử dụng các công cụ AI chưa được công ty phê duyệt hoặc kiểm soát.
+Ở các tổ chức có mức sử dụng Shadow AI cao, chi phí trung bình để xử lý một vụ vi phạm dữ liệu cao hơn khoảng 670.000 USD so với các tổ chức có mức sử dụng thấp hoặc không sử dụng.
+Đáng chú ý, 65% các vụ vi phạm liên quan Shadow AI làm lộ dữ liệu định danh cá nhân (PII), so với 53% ở các vụ vi phạm nói chung.
+IBM Cost of a Data Breach 2025
+NƯỚC ĐI AN TOÀN
+✓ Kiểm tra công cụ AI: chỉ sử dụng công cụ đã được Zalopay duyệt. Cần thêm tool mới → gửi request cho team Security, không dùng bản public trong lúc chờ.
+✓ Kiểm tra dữ liệu trước khi paste/upload: có dữ liệu khách hàng, credential hoặc source code không? Nếu có → không đưa vào public AI.
+✓ Khử nhận dạng dữ liệu: nếu cần AI xử lý dữ liệu thật → thay bằng dữ liệu mẫu hoặc dữ liệu đã khử nhận dạng trước khi upload.
+Dữ liệu tuyệt đối không đưa vào PUBLIC AI
+Dữ liệu khách hàng & giao dịch: CMND/CCCD, số điện thoại, hồ sơ KYC, số tài khoản/thẻ, số dư ví, CVV, ngày hết hạn thẻ...
+Thông tin xác thực & hệ thống: Password, API key, token, OTP/2FA, thông tin production.
+Thông tin nội bộ: Source code, kiến trúc hệ thống, log nội bộ, chiến lược kinh doanh, tài liệu chưa công bố.
+
+04 — BẬT AUTO-APPROVE CHO AI AGENT
+Mức độ thường gặp trong công việc: 5/5
+TÌNH HUỐNG
+Để agent làm việc liên tục mà không phải hỏi lại nhiều lần, người dùng bật auto-approve hoặc bỏ qua bước xin quyền. Agent sau đó được chạy trên máy đã có sẵn quyền truy cập production hoặc quyền ghi vào repo chính.
+DIỄN BIẾN
+Bạn giao cho agent một yêu cầu khá rộng, khiến agent có thể hiểu chưa đúng yêu cầu hoặc thiếu bối cảnh cần thiết.
+Agent được cấp sẵn quyền để sửa file, chạy lệnh hoặc thao tác trên hệ thống thật.
+Auto-approve khiến các quyết định quan trọng không còn bước kiểm tra của bạn trước khi thực hiện.
+Agent có thể thực hiện nhiều thay đổi liên tiếp nhanh hơn khả năng phát hiện và dừng lại của bạn.
+Hậu quả
+Dữ liệu production có thể bị xoá hoặc sửa ngoài dự kiến.
+Code không an toàn có thể được đưa vào repo, credential có thể bị sử dụng nhầm hoặc xảy ra những thao tác không thể hoàn tác.
+Agent có thể đánh giá sai và báo rằng hành động đã an toàn hoặc có thể khôi phục, khiến việc xử lý sự cố bị chậm trễ
+CASE THỰC TẾ
+Tháng 7/2025, Replit – nền tảng lập trình online tích hợp AI Agent – đã gặp sự cố khi AI Agent xoá database production trong lúc hệ thống đang ở trạng thái “code freeze”, làm mất dữ liệu của hơn 1.200 lãnh đạo và hơn 1.190 công ty. Agent sau đó thừa nhận đã thực hiện các lệnh trái phép và vi phạm chỉ thị không được tiếp tục nếu chưa có sự xác nhận của con người. Ban đầu, agent còn báo rằng dữ liệu không thể rollback, nhưng dữ liệu sau đó đã được khôi phục..
+Fortune, 7/2025
+NƯỚC ĐI AN TOÀN
+✓ Kiểm tra quyền của agent: không bật auto-approve hoặc bỏ qua bước xin quyền khi agent có quyền truy cập production hoặc repo chính.
+✓ Kiểm tra hành động của agent: xác nhận các hành động quan trọng trước khi agent thực hiện.
+✓ Giới hạn quyền truy cập: chạy agent trong sandbox/container và chỉ cấp những quyền thực sự cần thiết.
+05 — ĐỂ AI LÀM THEO CHỈ THỊ TRONG EMAIL, FILE VÀ WEBSITE
+Mức độ thường gặp trong công việc: 4/5
+TÌNH HUỐNG
+Bạn yêu cầu AI đọc một PDF, email hoặc website bên ngoài, trong khi AI đồng thời có quyền truy cập vào file, email, kho nội bộ hoặc các công cụ khác.
+DIỄN BIẾN
+Kẻ tấn công chèn một chỉ thị vào email, file hoặc website.
+AI đọc nội dung đó cùng với phần thông tin bạn yêu cầu nó xử lý
+AI có thể hiểu nhầm chỉ thị này là yêu cầu cần thực hiện và làm những việc ngoài nhiệm vụ ban đầu.
+Nếu AI có quyền truy cập dữ liệu hoặc công cụ cần thiết, nó có thể gửi dữ liệu ra ngoài mà bạn không cần trực tiếp bấm vào link hay thực hiện thêm thao tác nào.
+Hậu quả
+Email, tài liệu hoặc dữ liệu mà bạn có quyền truy cập có thể bị lộ.
+AI có thể tạo link, gửi nội dung hoặc truy cập tài nguyên ngoài ý muốn.
+Sự cố có thể khó nhận biết vì chỉ thị độc hại thường được ẩn trong nội dung mà bạn đang yêu cầu AI đọc.
+CASE THỰC TẾ
+EchoLeak (CVE-2025-32711, CVSS 9.3) là một lỗ hổng nghiêm trọng trên Microsoft 365 Copilot. Kẻ tấn công có thể gửi email chứa chỉ thị ẩn; khi người dùng sau đó yêu cầu Copilot xử lý nội dung liên quan, Copilot có thể làm theo chỉ thị đó và đưa dữ liệu nhạy cảm ra ngoài mà người dùng không cần mở email hay click vào link. Microsoft đã vá lỗ hổng và cho biết chưa ghi nhận việc lỗ hổng bị khai thác thực tế.
+Aim Security, 06/2025 · Microsoft Security Response Center
+NƯỚC ĐI AN TOÀN
+✓ Kiểm tra quyền của AI: không để AI vừa đọc file/email/web từ bên ngoài, vừa có quyền truy cập hệ thống nội bộ trong cùng một phiên.
+✓ Kiểm tra nguồn của chỉ thị: khi AI đề xuất hành động sau khi đọc tài liệu bên ngoài → xác định đề xuất đó đến từ yêu cầu của bạn hay từ nội dung tài liệu.
+✓ Kiểm tra hành động bất thường: nếu AI đột nhiên đề nghị tải, gửi, truy cập hoặc xác thực thứ bạn không yêu cầu, hoặc trả lời chệch khỏi nhiệm vụ ban đầu → dừng lại và kiểm tra ngay.
+06 — TIN VÀO VIDEO/GIỌNG NÓI DEEPFAKE
+Mức độ thường gặp trong công việc: 4/5
+TÌNH HUỐNG
+Một người tự nhận là lãnh đạo hoặc đồng nghiệp gọi video, tạo cảm giác khẩn cấp và yêu cầu chuyển tiền, chia sẻ credential, cung cấp dữ liệu hoặc bỏ qua quy trình bình thường.
+DIỄN BIẾN
+Kẻ xấu thu thập hình ảnh, giọng nói và thông tin về tổ chức.
+AI được dùng để tạo khuôn mặt, giọng nói hoặc cuộc gọi video giả.
+Nhiều nhân vật giả có thể cùng xuất hiện để khiến cuộc gọi trông đáng tin hơn.
+Bạn thực hiện yêu cầu vì tin rằng hình ảnh và giọng nói đã đủ để xác minh danh tính.
+Hậu quả
+Chuyển tiền, phê duyệt giao dịch hoặc cấp quyền cho sai đối tượng.
+Lộ thông tin đăng nhập, dữ liệu khách hàng hoặc thông tin nội bộ.
+Sự cố có thể không để lại dấu hiệu rõ ràng trên hệ thống để SOC phát hiện; lớp phòng thủ quan trọng nằm ở quy trình xác minh của con người.
+CASE THỰC TẾ
+Tháng 1/2024, một nhân viên tài chính của Arup tại Hong Kong tham gia cuộc họp video với người tự nhận là CFO và các đồng nghiệp. Tất cả những người xuất hiện trong cuộc họp đều là deepfake. Tin rằng đây là cuộc họp thật, nhân viên đã thực hiện 15 giao dịch chuyển tiền, với tổng giá trị khoảng 200 triệu HKD (khoảng 25,6 triệu USD).
+Đáng chú ý, Arup xác nhận không có hệ thống nội bộ nào bị xâm nhập trong vụ việc.
+CNN, 5/2024
+NƯỚC ĐI AN TOÀN
+✓ Kiểm tra yêu cầu: không phê duyệt giao dịch hoặc cấp quyền truy cập chỉ dựa trên một cuộc gọi video, kể cả khi bạn thấy mặt và nghe đúng giọng của người quen.
+✓ Xác minh danh tính: cúp máy và gọi lại qua số hoặc kênh liên lạc bạn đã có sẵn. Không sử dụng số điện thoại hoặc link do người gọi cung cấp.
+✓ Kiểm tra dấu hiệu bất thường: nếu yêu cầu vừa khẩn cấp, bí mật và không muốn bạn xác minh với người khác → dừng lại và xác minh qua một kênh khác trước khi thực hiện.
+
+07 — ĐỂ AI AUTO-RESPONDER TỰ ĐỘNG XỬ LÝ OUTPUT
+Mức độ thường gặp trong công việc: 3/5
+TÌNH HUỐNG
+Bot CSKH hoặc trợ lý nội bộ tự động đọc nội dung từ khách hàng, tạo câu trả lời có HTML/link rồi hiển thị hoặc gửi trực tiếp cho nhân viên hoặc khách hàng mà không kiểm tra và lọc nội dung trước.
+DIỄN BIẾN
+Kẻ xấu gửi nội dung được thiết kế để đánh lừa bot và khiến bot làm khác đi so với mục đích ban đầu.
+Bot đưa nội dung đó vào câu trả lời hoặc HTML mà nó tạo ra.
+Link hoặc đoạn mã độc xuất hiện trong giao diện mà nhân viên/khách hàng tin tưởng.
+Khi người dùng tương tác với nội dung đó, session, quyền truy cập hoặc dữ liệu có thể bị ảnh hưởng.
+Hậu quả
+Session của nhân viên hỗ trợ bị chiếm mà không cần biết mật khẩu.
+Bot tự phát tán link độc hại hoặc nội dung sai tới khách hàng.
+Khi bot tự động xử lý và gửi output, một lỗi có thể lan nhanh hơn và ảnh hưởng đến nhiều người hơn.
+CASE THỰC TẾ
+Tháng 8/2025, chatbot CSKH “Lena” của Lenovo được phát hiện có thể bị đánh lừa bằng một prompt dài khoảng 400 ký tự để tạo ra HTML độc hại. HTML này có thể lấy session cookie của nhân viên hỗ trợ, từ đó cho phép kẻ tấn công sử dụng phiên đăng nhập mà không cần mật khẩu. Lenovo đã khắc phục lỗ hổng trước khi công bố.
+Cybernews, 8/2025
+NƯỚC ĐI AN TOÀN
+✓ Kiểm soát đầu vào: không để bot vừa nhận nội dung từ khách hàng vừa tự tạo và hiển thị HTML/link mà không có bước kiểm tra.
+✓ Kiểm soát hành động của bot: lọc và xử lý an toàn toàn bộ output của AI trước khi hiển thị; không cho phép bot tự tạo và phát tán link chưa được kiểm duyệt
+✓ Theo dõi hoạt động: ghi nhận output và hành động của bot, đồng thời review định kỳ để phát hiện bất thường.
+08 — TẢI PHẦN MỀM AI TỪ NGUỒN KHÔNG XÁC MINH
+Mức độ thường gặp trong công việc: 3/5
+TÌNH HUỐNG
+Bạn thấy quảng cáo về một công cụ AI tạo video/ảnh “miễn phí”, truy cập một website trông chuyên nghiệp rồi được yêu cầu tải file .exe, .zip hoặc “kết quả AI” về máy.
+DIỄN BIẾN
+Quảng cáo hoặc kết quả tìm kiếm đưa bạn tới một website giả.
+Website mô phỏng quy trình tạo nội dung AI để khiến bạn tin rằng công cụ đang hoạt động thật.
+Website yêu cầu tải một file được nguỵ trang thành phần mềm hoặc kết quả AI.
+Khi bạn mở file, mã độc có thể đánh cắp password, cookie, thông tin đăng nhập và dữ liệu ví crypto trên thiết bị.
+Hậu quả
+Mất password, cookie, thông tin đăng nhập và quyền truy cập tài khoản.
+Thiết bị có thể trở thành cổng vào để kẻ xấu tiếp cận hệ thống công ty.
+Kẻ xấu có thể sử dụng tài khoản thật để tiếp tục lừa đảo đồng nghiệp hoặc khách hàng.
+CASE THỰC TẾ
+Noodlophile là một loại mã độc đánh cắp thông tin được phát tán qua các website AI tạo video giả. Người dùng được dụ upload ảnh/video và tải “kết quả AI” về máy — nhưng file tải xuống thực chất chứa malware có thể đánh cắp mật khẩu trình duyệt, cookie, token và ví crypto. Một bài đăng quảng bá chiến dịch trên Facebook đã đạt hơn 62.000 lượt xem.
+Morphisec, 5/2025
+NƯỚC ĐI AN TOÀN
+✓ Kiểm tra nguồn tải: chỉ tải phần mềm từ website chính thức của nhà phát hành.
+✓ Kiểm tra dấu hiệu bất thường: quảng cáo “AI miễn phí” yêu cầu tải .exe / .zip để nhận kết quả → đóng tab và không tải file.
+✓ Báo Security khi nghi ngờ: đã tải file nhưng thấy bất thường → không mở hoặc thực thi. Nếu đã mở file → báo ngay Security qua security.zlp@vng.com.vn để được hướng dẫn.
+
+⚖ KHI VI PHẠM, ĐIỀU GÌ SẼ XẢY RA?
+01 | THEO QUY ĐỊNH NỘI BỘ
+Căn cứ Thỏa thuận bảo mật thông tin và không cạnh tranh
+KỶ LUẬT NỘI BỘ
+Có thể bị xử lý theo quy định pháp luật và Nội quy Công ty.
+BỒI THƯỜNG THIỆT HẠI
+Bồi thường thiệt hại thực tế, bao gồm các chi phí liên quan như tố tụng, luật sư, án phí.
++ KHOẢN TIỀN BỔ SUNG
+Có thể phải nộp thêm một khoản tiền bằng tổng thu nhập 12 tháng gần nhất, bao gồm lương, thưởng, cổ phiếu và các lợi ích khác
+02 | THEO QUY ĐỊNH PHÁP LUẬT
+Căn cứ: Điều 8 Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 và Dự thảo Nghị định về Quy định xử phạt vi phạm hành chính trong lĩnh vực an ninh mạng và bảo vệ dữ liệu cá nhân. Ngoài xử phạt hành chính, cá nhân có thể chịu kỷ luật lao động, nghĩa vụ bồi thường hoặc trách nhiệm hình sự tuỳ vụ việc.
+3 TỶ ĐỒNG
+Mức phạt tiền tối đa đối với tổ chức cho các hành vi vi phạm khác trong lĩnh vực bảo vệ dữ liệu cá nhân.
+1,5 TỶ ĐỒNG
+Mức phạt tiền tối đa đối với cá nhân thực hiện cùng hành vi vi phạm, bằng 1/2 mức tối đa áp dụng cho tổ chức.
+5% DOANH THU
+Mức phạt tiền tối đa đối với tổ chức vi phạm quy định về chuyển dữ liệu cá nhân xuyên biên giới, tính trên doanh thu của năm trước liền kề.
+
+NẾU ĐÃ "DÍNH CHƯỞNG" — HÃY PHÁT TÍN HIỆU ÉT O ÉT GẤP !!
+Ngắt mạng khỏi thiết bị.
+Không tắt máy, không tự xoá dấu vết.
+Báo Security ngay tại security.zlp@vng.com.vn.
+
+ZALOPAY · AI SECURITY
+
+
