@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ext-resource-dependency" content="./assets/card-02.png" data-resource-id="card02" />
+<meta name="ext-resource-dependency" content="./assets/card-03.png" data-resource-id="card03" />
+<meta name="ext-resource-dependency" content="./assets/card-04.png" data-resource-id="card04" />
+<meta name="ext-resource-dependency" content="./assets/card-05.png" data-resource-id="card05" />
+<meta name="ext-resource-dependency" content="./assets/card-06.png" data-resource-id="card06" />
+<meta name="ext-resource-dependency" content="./assets/card-07.png" data-resource-id="card07" />
+<meta name="ext-resource-dependency" content="./assets/card-08.png" data-resource-id="card08" />
+<meta name="ext-resource-dependency" content="./assets/card-09.png" data-resource-id="card09" />
+<script>window.__res=function(k,p){var r=window.__resources||{};return r[k]||p;};</script>
+<template id="__bundler_thumbnail" data-bg-color="#16130E">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#16130E"/>
+    <rect x="0" y="0" width="1200" height="70" fill="#FCD820"/>
+    <rect x="0" y="730" width="1200" height="70" fill="#FCD820"/>
+    <path d="M600 220 L900 610 H300 Z" fill="#FFC629" stroke="#14120D" stroke-width="26" stroke-linejoin="round"/>
+    <rect x="578" y="350" width="44" height="150" rx="20" fill="#14120D"/>
+    <circle cx="600" cy="548" r="26" fill="#14120D"/>
+  </svg>
+</template>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:'Aeonik Pro';src:url("assets/fonts/AeonikPro-Regular.otf") format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Aeonik Pro';src:url("assets/fonts/AeonikPro-Bold.otf") format('opentype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Aeonik Pro';src:url("assets/fonts/AeonikPro-Black.otf") format('opentype');font-weight:900;font-style:normal;font-display:swap}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;padding:0;background:#16130E;color:#FFFCF3;font-family:'Aeonik Pro',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#FFC629;text-decoration:none}
+a:hover{color:#FFFCF3}
+@keyframes tape{to{background-position:-56.5685px 0}}
+@keyframes beacon{0%,100%{opacity:.22;box-shadow:0 0 0 0 rgba(229,22,44,0)}50%{opacity:1;box-shadow:0 0 13px 4px rgba(229,22,44,.7)}}
+@keyframes lamp{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes sweep{to{transform:rotate(360deg)}}
+@keyframes lampon{0%,100%{opacity:.62}50%{opacity:1}}
+@keyframes headpulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.13)}}
+@keyframes glow{0%,100%{box-shadow:inset 0 0 0 0 rgba(255,198,41,0)}50%{box-shadow:inset 0 0 110px 12px rgba(255,198,41,.26)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes alarm{0%,100%{border-color:#7E0E1C;box-shadow:0 24px 54px rgba(0,0,0,.55)}50%{border-color:#FF2B3F;box-shadow:0 24px 54px rgba(0,0,0,.55),0 0 46px 8px rgba(229,22,44,.5)}}
+@keyframes siren{0%,100%{opacity:.5}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none !important}}
+</style>
+</helmet>
+
+<div style="background:#16130E;min-height:100vh;overflow-x:hidden">
+
+  <div style="position:sticky;top:0;z-index:60">
+    <div style="height:10px;background:repeating-linear-gradient(135deg,var(--hz,#FFC629) 0 20px,#14120D 20px 40px);animation:tape 2s linear infinite;animation-play-state:var(--anim,running)"></div>
+    <div style="background:#1B1710;border-bottom:2px solid var(--hz,#FFC629);padding:10px clamp(14px,3vw,28px);display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <img src="assets/zalopay-logo.png" alt="Zalopay" style="height:19px;width:auto;display:block">
+      <span style="width:1px;height:18px;background:#3B352A"></span>
+      <span style="font-weight:900;font-size:10.5px;letter-spacing:.2em;color:var(--hz,#FFC629)">AI SECURITY</span>
+      <span style="margin-left:auto;width:10px;height:10px;border-radius:50%;background:#E5162C;animation:beacon 1.1s ease-in-out infinite;animation-play-state:var(--anim,running)"></span>
+    </div>
+  </div>
+
+  <section style="position:relative;background:#FCD820;background-image:repeating-linear-gradient(135deg,rgba(0,0,0,.07) 0 28px,rgba(0,0,0,0) 28px 56px);border-bottom:5px solid #14120D">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(18px,2.6vw,32px) clamp(16px,3vw,28px);display:flex;gap:clamp(18px,3vw,38px);align-items:center;flex-wrap:wrap">
+      <div style="position:relative;width:clamp(150px,20vw,244px);aspect-ratio:1;flex:none;margin:0 auto">
+        <img src="assets/hero-sign.png" alt="Biển cảnh báo nguy hiểm AI" style="position:absolute;inset:0;margin:auto;width:100%;height:auto;filter:brightness(0);animation:bob 3.6s ease-in-out infinite;animation-play-state:var(--anim,running)">
+      </div>
+      <div style="flex:999 1 380px;min-width:280px">
+        <div style="display:inline-flex;align-items:center;gap:10px;background:#14120D;padding:9px 14px;margin-bottom:clamp(14px,2vw,20px)">
+          <span style="width:9px;height:9px;border-radius:50%;background:var(--hz,#FFC629);animation:lamp .85s steps(1,end) infinite;animation-play-state:var(--anim,running)"></span>
+          <span style="font-weight:900;font-size:clamp(10.5px,1.4vw,13px);letter-spacing:.09em;color:var(--hz,#FFC629)">⚠ CẢNH BÁO NGUY HIỂM! HÃY DỪNG LẠI VÀ ĐỌC!</span>
+        </div>
+        <h1 style="margin:0;font-weight:900;font-size:clamp(23px,3.5vw,40px);line-height:1.2;letter-spacing:-.015em;color:#14120D;text-wrap:pretty">8 RỦI RO BẢO MẬT KHI THI CÔNG AI HẰNG NGÀY CÓ THỂ ẢNH HƯỞNG ĐẾN<br><span style="background: rgb(20, 18, 13); color: var(--hz,#FFC629); padding: 0px 0.1em; box-decoration-break: clone; -webkit-box-decoration-break: clone;">ZALOPAY STARTER</span></h1>
+      </div>
+    </div>
+  </section>
+
+  <div style="height:12px;background:repeating-linear-gradient(135deg,var(--hz,#FFC629) 0 20px,#14120D 20px 40px);animation:tape 2s linear infinite;animation-play-state:var(--anim,running)"></div>
+
+  <main style="max-width:1180px;margin:0 auto;padding:clamp(34px,5vw,62px) clamp(16px,3vw,28px) clamp(20px,3vw,34px)">
+
+    <div id="quickscan" style="scroll-margin-top:80px">
+      <div data-rv="y" style="display:flex;align-items:center;gap:14px;margin-bottom:clamp(14px,2vw,20px)">
+        <div style="position:relative;width:40px;height:35px;flex:none;filter:drop-shadow(0 2px 0 rgba(0,0,0,.55))">
+          <div style="position:absolute;inset:0;background:var(--hz,#FFC629);clip-path:polygon(50% 2%,100% 98%,0 98%)"></div>
+          <div style="position:absolute;left:50%;top:40%;width:4px;height:10px;margin-left:-2px;background:#14120D;border-radius:2px"></div>
+          <div style="position:absolute;left:50%;top:76%;width:4px;height:4px;margin-left:-2px;background:#14120D;border-radius:50%"></div>
+        </div>
+        <h2 style="margin:0;font-weight:900;font-size:clamp(18px,2.8vw,30px);letter-spacing:-.01em;color:var(--hz,#FFC629);text-wrap:balance">QUICK SCAN — 8 HÀNH ĐỘNG &amp; RỦI RO</h2>
+        <div style="flex:1;height:10px;min-width:20px;background:repeating-linear-gradient(135deg,var(--hz,#FFC629) 0 20px,#14120D 20px 40px);animation:tape 2s linear infinite;animation-play-state:var(--anim,running)"></div>
+      </div>
+      <div data-rv="y" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:14px">
+        <sc-for list="{{ risks }}" as="r" hint-placeholder-count="4">
+          <a href="#risk-{{ r.i }}" style="--sv:{{ r.sv }};--svtx:{{ r.svtx }};display:flex;flex-direction:column;gap:11px;background:#1B1710;border:1px solid #2E281E;border-top:6px solid var(--sv);padding:16px 15px 17px;text-decoration:none;color:#FFFCF3;transition:background .16s ease,transform .16s ease" style-hover="background:#241F16;transform:translateY(-3px)">
+            <div style="display:flex;align-items:center;gap:9px">
+              <span style="flex:none;display:grid;place-items:center;width:26px;height:26px;background:var(--sv);color:var(--svtx);font-weight:900;font-size:12px">{{ r.n }}</span>
+            </div>
+            <sc-if value="{{ r.img }}"><span style="display:grid;place-items:center;width:100%;max-width:132px;aspect-ratio:1;margin:0 auto;background:#fff;border:2px solid #14120D;border-radius:10px;padding:7px"><img src="{{ r.img }}" alt="{{ r.alt }}" style="display:block;width:100%;height:100%;object-fit:contain"></span></sc-if>
+            <div style="font-weight:900;font-size:15.5px;line-height:1.28;letter-spacing:-.01em;color:#FFFCF3;text-wrap:pretty">{{ r.scan }}</div>
+            <div style="margin-top:auto;padding-top:11px;border-top:1px solid #2E281E">
+              <div style="font-weight:900;font-size:9.5px;letter-spacing:.16em;color:#8A8272;margin-bottom:6px">RỦI RO</div>
+              <div style="font-size:13.5px;line-height:1.45;color:#F3A6AE;text-wrap:pretty">{{ r.impact }}</div>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(46px,6vw,88px)">
+      <div data-rv="y" style="display:flex;align-items:center;gap:14px;margin-bottom:clamp(14px,2vw,20px)">
+        <div style="position:relative;width:40px;height:35px;flex:none;filter:drop-shadow(0 2px 0 rgba(0,0,0,.55))">
+          <div style="position:absolute;inset:0;background:var(--hz,#FFC629);clip-path:polygon(50% 2%,100% 98%,0 98%)"></div>
+          <div style="position:absolute;left:50%;top:40%;width:4px;height:10px;margin-left:-2px;background:#14120D;border-radius:2px"></div>
+          <div style="position:absolute;left:50%;top:76%;width:4px;height:4px;margin-left:-2px;background:#14120D;border-radius:50%"></div>
+        </div>
+        <h2 style="margin:0;font-weight:900;font-size:clamp(18px,2.8vw,30px);letter-spacing:-.01em;color:var(--hz,#FFC629);text-wrap:balance">8 HÀNH ĐỘNG QUEN THUỘC</h2>
+        <div style="flex:1;height:10px;min-width:20px;background:repeating-linear-gradient(135deg,var(--hz,#FFC629) 0 20px,#14120D 20px 40px);animation:tape 2s linear infinite;animation-play-state:var(--anim,running)"></div>
+      </div>
+      <div data-rv="y" style="margin:0 0 clamp(24px,3.4vw,40px);max-width:900px;font-weight:900;font-size:clamp(22px,3.8vw,44px);line-height:1.16;letter-spacing:-.02em;color:#FFFCF3;text-wrap:balance">CÓ THỂ DẪN ĐẾN <span style="background:#E5162C;color:#FFFCF3;padding:0 .1em;box-decoration-break:clone;-webkit-box-decoration-break:clone">RỦI RO KHÔN LƯỜNG</span></div>
+
+      <sc-for list="{{ risks }}" as="r" hint-placeholder-count="2">
+        <article id="risk-{{ r.i }}" data-rv="y" style="--sv:{{ r.sv }};--svtx:{{ r.svtx }};position:relative;background:#FFFCF3;color:#14120D;border:4px solid var(--sv);box-shadow:12px 12px 0 {{ r.shd }};margin-bottom:clamp(26px,4vw,46px);scroll-margin-top:84px">
+          <div style="background:var(--sv);border-bottom:4px solid #14120D;padding:clamp(13px,2vw,20px) clamp(14px,2.4vw,24px);display:flex;align-items:center;gap:clamp(12px,2vw,20px);animation:headpulse 2.6s ease-in-out infinite;animation-play-state:var(--anim,running)">
+            <div style="position:relative;width:clamp(46px,6vw,64px);aspect-ratio:1;flex:none">
+              <div style="position:absolute;inset:0;background:#14120D;clip-path:polygon(30% 0,70% 0,100% 30%,100% 70%,70% 100%,30% 100%,0 70%,0 30%)"></div>
+              <span style="position:absolute;inset:0;display:grid;place-items:center;font-weight:900;font-size:clamp(17px,2.3vw,23px);color:var(--hz,#FFC629)">{{ r.n }}</span>
+            </div>
+            <div style="min-width:0">
+              <h3 style="margin:0;font-weight:900;font-size:clamp(17px,2.6vw,30px);line-height:1.08;letter-spacing:-.02em;color:var(--svtx);text-wrap:balance">{{ r.title }}</h3>
+            </div>
+          </div>
+
+          <div style="padding:clamp(16px,2.6vw,28px);display:flex;gap:clamp(16px,2.6vw,30px);flex-wrap:wrap;align-items:flex-start">
+            <div style="flex:1 1 200px;max-width:250px;margin:0 auto">
+              <div style="position:relative;border:4px solid #14120D;background:#fff">
+                <sc-if value="{{ r.img }}"><img src="{{ r.img }}" alt="{{ r.alt }}" style="display:block;width:100%;height:auto"></sc-if>
+                <span style="position:absolute;top:7px;left:7px;width:8px;height:8px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#B9B2A2,#4A4438)"></span>
+                <span style="position:absolute;top:7px;right:7px;width:8px;height:8px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#B9B2A2,#4A4438)"></span>
+              </div>
+              <div style="width:14px;height:24px;margin:0 auto;background:linear-gradient(90deg,#5E584A,#A9A292 42%,#443F34)"></div>
+              <div style="display:var(--stampd,block);margin-top:16px;border:2px solid #14120D;background:#FFFCF3;padding:11px 12px 12px">
+                <div style="text-align:center;font-weight:900;font-size:9.5px;letter-spacing:.14em;color:#8A8272;margin-bottom:9px">MỨC ĐỘ THƯỜNG GẶP TRONG CÔNG VIỆC</div>
+                <div style="position:relative;width:118px;height:62px;margin:0 auto;overflow:hidden">
+                  <div style="position:absolute;top:0;left:0;width:118px;height:118px;border-radius:50%;background:conic-gradient(from 270deg,var(--sv) 0 {{ r.gauge }}%,#E4DECD {{ r.gauge }}% 50%,rgba(0,0,0,0) 50%)"></div>
+                  <div style="position:absolute;top:16px;left:16px;width:86px;height:86px;border-radius:50%;background:#FFFCF3"></div>
+                  <div style="position:absolute;left:0;right:0;bottom:1px;text-align:center;font-weight:900;font-size:21px;letter-spacing:-.02em;line-height:1;color:{{ r.rateC }}">{{ r.rate }}/5</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="flex:999 1 330px;min-width:0;display:flex;flex-direction:column;gap:clamp(14px,2vw,18px)">
+              <div>
+                <div style="font-weight:900;font-size:10.5px;letter-spacing:.18em;color:#8A8272;margin-bottom:7px">TÌNH HUỐNG</div>
+                <p style="margin:0;font-size:15px;line-height:1.6;text-wrap:pretty">{{ r.scenario }}</p>
+              </div>
+
+              <div style="background:#F4F0E3;border:1px solid #E2DBC6;padding:16px 18px">
+                <div style="font-weight:900;font-size:10.5px;letter-spacing:.18em;color:#8A8272;margin-bottom:11px">DIỄN BIẾN</div>
+                <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+                  <sc-for list="{{ r.flow }}" as="f" hint-placeholder-count="4">
+                    <li style="display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px;align-items:start">
+                      <span style="width:22px;height:22px;border-radius:50%;background:var(--sv);color:var(--svtx);font-weight:900;font-size:11px;display:grid;place-items:center">{{ f.i }}</span>
+                      <span style="font-size:14.5px;line-height:1.5">{{ f.t }}</span>
+                    </li>
+                  </sc-for>
+                </ol>
+              </div>
+
+              <div>
+                <div style="background:var(--sv);color:var(--svtx);font-weight:900;font-size:clamp(11px,1.5vw,13px);letter-spacing:.2em;padding:9px 14px;margin-bottom:10px">RỦI RO</div>
+                <div style="display:flex;flex-direction:column;gap:10px">
+                  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px">
+                    <sc-for list="{{ r.cons }}" as="c" hint-placeholder-count="3">
+                      <div style="background:{{ r.consBg }};border-top:4px solid var(--sv);padding:12px 13px 14px;font-weight:700;font-size:14.5px;line-height:1.45;color:#14120D">{{ c }}</div>
+                    </sc-for>
+                  </div>
+                  <sc-if value="{{ r.note }}">
+                    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:2px">
+                      <span style="flex:none;max-width:118px;transform:rotate(-7deg);border:3px double #C11226;border-radius:5px;padding:8px 12px;color:#C11226;font-weight:900;font-size:11.5px;letter-spacing:.08em;line-height:1.2;text-align:center;opacity:.92">{{ r.note.label }}</span>
+                      <p style="flex:1 1 200px;margin:0;font-weight:700;font-size:14px;line-height:1.5;color:#3A342A">{{ r.note.text }}</p>
+                    </div>
+                  </sc-if>
+                </div>
+              </div>
+
+              <div style="background:#F5F1E3;border-left:5px solid var(--sv);padding:15px 17px">
+                <div style="font-weight:900;font-size:10.5px;letter-spacing:.18em;color:#8A8272;margin-bottom:9px">CASE THỰC TẾ</div>
+                <p style="margin:0;font-size:15px;line-height:1.7;text-wrap:pretty"><sc-for list="{{ r.proofSeg }}" as="p" hint-placeholder-count="2"><sc-if value="{{ p.text }}" hint-placeholder-val="{{ true }}">{{ p.text }}</sc-if><sc-if value="{{ p.hi }}"><span style="font-weight:900;background:var(--sv);color:var(--svtx);padding:1px 5px;border-radius:2px;box-decoration-break:clone;-webkit-box-decoration-break:clone">{{ p.hi }}</span></sc-if></sc-for></p>
+                <div style="margin-top:10px;font-size:11.5px;font-style:italic;color:#8A8272">{{ r.src }}</div>
+              </div>
+
+              <div style="background:#0B5CAD;border:3px solid #08417C;padding:16px 18px">
+                <div style="font-weight:900;font-size:11.5px;letter-spacing:.2em;color:#BBD7F5;margin-bottom:9px">NƯỚC ĐI AN TOÀN</div>
+                <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+                  <sc-for list="{{ r.safe }}" as="a" hint-placeholder-count="3">
+                    <li style="display:grid;grid-template-columns:19px minmax(0,1fr);gap:10px;align-items:start">
+                      <span style="width:19px;height:19px;margin-top:2px;border-radius:3px;background:#FFFCF3;color:#0B5CAD;font-weight:900;font-size:11px;display:grid;place-items:center">✓</span>
+                      <span style="font-size:14.5px;line-height:1.55;color:#FFFCF3"><sc-for list="{{ a.seg }}" as="s" hint-placeholder-count="1"><sc-if value="{{ s.text }}" hint-placeholder-val="{{ true }}">{{ s.text }}</sc-if><sc-if value="{{ s.code }}"><span style="font-weight:700;background:rgba(255,252,243,.2);padding:1px 4px;border-radius:3px">{{ s.code }}</span></sc-if><sc-if value="{{ s.b }}"><span style="font-weight:900">{{ s.b }}</span></sc-if><sc-if value="{{ s.mark }}"><span style="font-weight:900;background:var(--hz,#FFC629);color:#14120D;padding:1px 6px;border-radius:2px;box-decoration-break:clone;-webkit-box-decoration-break:clone">{{ s.mark }}</span></sc-if></sc-for></span>
+                    </li>
+                  </sc-for>
+                </ul>
+              </div>
+
+              <sc-if value="{{ r.never }}">
+                <div style="background:#FCE9EB;border:3px solid #E5162C;padding:16px 18px">
+                  <div style="font-weight:900;font-size:11.5px;letter-spacing:.16em;color:#E5162C;margin-bottom:11px">DỮ LIỆU TUYỆT ĐỐI KHÔNG ĐƯA VÀO PUBLIC AI</div>
+                  <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+                    <sc-for list="{{ r.never }}" as="nv" hint-placeholder-count="3">
+                      <li style="display:grid;grid-template-columns:19px minmax(0,1fr);gap:10px;align-items:start">
+                        <span style="width:19px;height:19px;margin-top:2px;border-radius:3px;background:#E5162C;color:#FFFCF3;font-weight:900;font-size:11px;display:grid;place-items:center">✕</span>
+                        <span style="font-size:14.5px;line-height:1.55;color:#14120D"><span style="font-weight:900">{{ nv.k }}</span> {{ nv.t }}</span>
+                      </li>
+                    </sc-for>
+                  </ul>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+
+    <div id="legal" style="margin:clamp(46px,6vw,88px) 0 clamp(40px,5vw,72px);scroll-margin-top:80px">
+      <div data-rv="y" style="display:flex;align-items:center;gap:14px;margin-bottom:clamp(16px,2.4vw,24px)">
+        <div style="position:relative;width:40px;height:35px;flex:none;filter:drop-shadow(0 2px 0 rgba(0,0,0,.55))">
+          <div style="position:absolute;inset:0;background:var(--hz,#FFC629);clip-path:polygon(50% 2%,100% 98%,0 98%)"></div>
+          <div style="position:absolute;left:50%;top:40%;width:4px;height:10px;margin-left:-2px;background:#14120D;border-radius:2px"></div>
+          <div style="position:absolute;left:50%;top:76%;width:4px;height:4px;margin-left:-2px;background:#14120D;border-radius:50%"></div>
+        </div>
+        <h2 style="margin:0;font-weight:900;font-size:clamp(18px,2.8vw,30px);letter-spacing:-.01em;color:#FF2B3F;text-wrap:balance;animation:siren 1.4s ease-in-out infinite;animation-play-state:var(--anim,running)">⚖ KHI VI PHẠM, ĐIỀU GÌ SẼ XẢY RA?</h2>
+        <div style="flex:1;height:10px;min-width:20px;background:repeating-linear-gradient(135deg,var(--hz,#FFC629) 0 20px,#14120D 20px 40px);animation:tape 2s linear infinite;animation-play-state:var(--anim,running)"></div>
+      </div>
+
+      <div data-rv="y" style="position:relative;background:linear-gradient(180deg,#26211A,#1A1610);border:4px solid #E5162C;box-shadow:0 24px 54px rgba(0,0,0,.55);padding:clamp(20px,3vw,36px);animation:alarm 1.4s ease-in-out infinite;animation-play-state:var(--anim,running)">
+        <span style="position:absolute;top:9px;left:9px;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#918A7A,#38332A)"></span>
+        <span style="position:absolute;top:9px;right:9px;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#918A7A,#38332A)"></span>
+        <span style="position:absolute;bottom:9px;left:9px;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#918A7A,#38332A)"></span>
+        <span style="position:absolute;bottom:9px;right:9px;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#918A7A,#38332A)"></span>
+        <p style="margin:0 auto clamp(22px,3vw,32px);max-width:760px;text-align:center;font-size:clamp(14px,1.7vw,16px);line-height:1.65;color:#B9B1A0">Một sự cố dữ liệu có thể kéo theo nhiều hệ quả. Hình thức và mức xử lý phụ thuộc vào hành vi, tính chất, mức độ và hậu quả của từng vụ việc.</p>
+
+        <div data-rv="y" style="text-align:center;font-weight:900;font-size:clamp(15px,2vw,19px);letter-spacing:.02em;color:var(--hz,#FFC629);margin-bottom:6px">01 | THEO QUY ĐỊNH NỘI BỘ</div>
+        <p style="margin:0 auto 14px;max-width:720px;text-align:center;font-size:12.5px;line-height:1.6;font-style:italic;color:#8B8372">Căn cứ Thỏa thuận bảo mật thông tin và không cạnh tranh</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;justify-content:center;margin-bottom:clamp(24px,3.4vw,38px)">
+          <div style="background:#14120D;border-top:4px solid var(--hz,#FFC629);padding:18px 16px 20px">
+            <div style="font-weight:900;font-size:clamp(16px,2vw,20px);line-height:1.15;letter-spacing:-.015em;color:var(--hz,#FFC629);margin-bottom:10px">KỶ LUẬT NỘI BỘ</div>
+            <div style="font-size:13px;line-height:1.5;color:#A69E8D">Có thể bị xử lý theo quy định pháp luật và Nội quy Công ty.</div>
+          </div>
+          <div style="background:#14120D;border-top:4px solid var(--hz,#FFC629);padding:18px 16px 20px">
+            <div style="font-weight:900;font-size:clamp(16px,2vw,20px);line-height:1.15;letter-spacing:-.015em;color:var(--hz,#FFC629);margin-bottom:10px">BỒI THƯỜNG THIỆT HẠI</div>
+            <div style="font-size:13px;line-height:1.5;color:#A69E8D">Bồi thường thiệt hại thực tế, bao gồm các chi phí liên quan như tố tụng, luật sư, án phí.</div>
+          </div>
+          <div style="background:#14120D;border-top:4px solid var(--hz,#FFC629);padding:18px 16px 20px">
+            <div style="font-weight:900;font-size:clamp(16px,2vw,20px);line-height:1.15;letter-spacing:-.015em;color:var(--hz,#FFC629);margin-bottom:10px">+ KHOẢN TIỀN BỔ SUNG</div>
+            <div style="font-size:13px;line-height:1.5;color:#A69E8D">Có thể phải nộp thêm một khoản tiền bằng tổng thu nhập 12 tháng gần nhất, bao gồm lương, thưởng, cổ phiếu và các lợi ích khác</div>
+          </div>
+        </div>
+
+        <div data-rv="y" style="text-align:center;font-weight:900;font-size:clamp(15px,2vw,19px);letter-spacing:.02em;color:var(--hz,#FFC629);margin-bottom:6px">02 | THEO QUY ĐỊNH PHÁP LUẬT</div>
+        <p style="margin:0 auto 14px;max-width:860px;text-align:center;font-size:12.5px;line-height:1.6;font-style:italic;color:#8B8372">Căn cứ: Điều 8 Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 và Dự thảo Nghị định về Quy định xử phạt vi phạm hành chính trong lĩnh vực an ninh mạng và bảo vệ dữ liệu cá nhân. Ngoài xử phạt hành chính, cá nhân có thể chịu kỷ luật lao động, nghĩa vụ bồi thường hoặc trách nhiệm hình sự tuỳ vụ việc.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-bottom:clamp(18px,2.4vw,24px)">
+          <div style="background:#14120D;border-top:4px solid var(--hz,#FFC629);padding:18px 16px 20px">
+            <div style="font-weight:900;font-size:clamp(23px,3vw,32px);line-height:1.05;letter-spacing:-.025em;color:var(--hz,#FFC629);margin-bottom:10px"><span data-cu="3" data-dec="0" data-grp="false">3</span> TỶ ĐỒNG</div>
+            <div style="font-size:13px;line-height:1.5;color:#A69E8D">Mức phạt tiền tối đa đối với tổ chức cho các hành vi vi phạm khác trong lĩnh vực bảo vệ dữ liệu cá nhân.</div>
+          </div>
+          <div style="background:#14120D;border-top:4px solid var(--hz,#FFC629);padding:18px 16px 20px">
+            <div style="font-weight:900;font-size:clamp(23px,3vw,32px);line-height:1.05;letter-spacing:-.025em;color:var(--hz,#FFC629);margin-bottom:10px"><span data-cu="1.5" data-dec="1" data-grp="false">1,5</span> TỶ ĐỒNG</div>
+            <div style="font-size:13px;line-height:1.5;color:#A69E8D">Mức phạt tiền tối đa đối với cá nhân thực hiện cùng hành vi vi phạm, bằng 1/2 mức tối đa áp dụng cho tổ chức.</div>
+          </div>
+          <div style="background:#14120D;border-top:4px solid var(--hz,#FFC629);padding:18px 16px 20px">
+            <div style="font-weight:900;font-size:clamp(23px,3vw,32px);line-height:1.05;letter-spacing:-.025em;color:var(--hz,#FFC629);margin-bottom:10px"><span data-cu="5" data-dec="0" data-grp="false">5</span>% DOANH THU</div>
+            <div style="font-size:13px;line-height:1.5;color:#A69E8D">Mức phạt tiền tối đa đối với tổ chức vi phạm quy định về chuyển dữ liệu cá nhân xuyên biên giới, tính trên doanh thu của năm trước liền kề.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div style="height:14px;background:repeating-linear-gradient(135deg,#E5162C 0 20px,#14120D 20px 40px);animation:tape 2s linear infinite;animation-play-state:var(--anim,running)"></div>
+
+  <section id="cta" style="position:relative;background:#D8121F;background-image:repeating-linear-gradient(135deg,rgba(0,0,0,.10) 0 28px,rgba(0,0,0,0) 28px 56px);padding:clamp(30px,4.6vw,56px) clamp(16px,3vw,28px);text-align:center;animation:glow 1.9s ease-in-out infinite;animation-play-state:var(--anim,running)">
+    <div style="position:relative;width:88px;height:88px;margin:0 auto 14px">
+      <div style="position:absolute;inset:0;border-radius:50%;background:conic-gradient(rgba(255,198,41,.9),rgba(255,198,41,0) 26%,rgba(255,198,41,0) 50%,rgba(255,198,41,.9) 50%,rgba(255,198,41,0) 76%,rgba(255,198,41,0));animation:sweep 1.9s linear infinite;animation-play-state:var(--anim,running)"></div>
+      <div style="position:absolute;inset:21px;border-radius:50%;background:#14120D"></div>
+      <div style="position:absolute;inset:28px;border-radius:50%;background:var(--hz,#FFC629);box-shadow:0 0 26px 8px rgba(255,198,41,.65);animation:lampon 1s ease-in-out infinite;animation-play-state:var(--anim,running)"></div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:clamp(14px,3vw,30px);flex-wrap:wrap;margin-bottom:16px">
+      <img src="assets/cta-person.png" alt="Người bị dính chưởng" style="display:block;flex:none;height:clamp(74px,10vw,124px);width:auto">
+      <h2 style="margin:0;font-weight:900;font-size:clamp(26px,4.4vw,50px);line-height:1.04;letter-spacing:-.025em;color:#FFFCF3">NẾU ĐÃ <span style="color:var(--hz,#FFC629)">"DÍNH CHƯỞNG"</span></h2>
+      <img src="assets/cta-attacker.png" alt="Chưởng — mã độc và kẻ tấn công" style="display:block;flex:none;height:clamp(60px,8vw,100px);width:auto">
+    </div>
+    <div style="display:inline-flex;align-items:center;gap:11px;background:#14120D;padding:11px 20px;margin-bottom:clamp(20px,3vw,30px)">
+      <span style="width:10px;height:10px;border-radius:50%;background:var(--hz,#FFC629);animation:lamp .8s steps(1,end) infinite;animation-play-state:var(--anim,running)"></span>
+      <span style="font-weight:900;font-size:clamp(14px,2vw,18px);letter-spacing:.03em;color:var(--hz,#FFC629);white-space:nowrap">HÃY PHÁT TÍN HIỆU ÉT O ÉT GẤP !!</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;max-width:900px;margin:0 auto clamp(20px,2.6vw,28px)">
+      <div data-rv="y" style="position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;background:#14120D;border:2px solid var(--hz,#FFC629);padding:22px 18px 24px;text-align:center">
+        <span style="position:absolute;top:10px;left:14px;font-weight:900;font-size:17px;color:var(--hz,#FFC629)">01</span>
+        <img src="assets/step-01.png" alt="Ngắt mạng khỏi thiết bị" style="display:block;width:clamp(104px,15vw,148px);height:auto">
+        <p style="margin:0;font-weight:700;font-size:clamp(17px,2.2vw,21px);line-height:1.4;color:#FFFCF3;text-wrap:pretty">Ngắt mạng khỏi thiết bị.</p>
+      </div>
+      <div data-rv="y" data-d="80ms" style="position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;background:#14120D;border:2px solid var(--hz,#FFC629);padding:22px 18px 24px;text-align:center">
+        <span style="position:absolute;top:10px;left:14px;font-weight:900;font-size:17px;color:var(--hz,#FFC629)">02</span>
+        <img src="assets/step-02.png" alt="Không tắt máy, không tự xoá dấu vết" style="display:block;width:clamp(104px,15vw,148px);height:auto">
+        <p style="margin:0;font-weight:700;font-size:clamp(17px,2.2vw,21px);line-height:1.4;color:#FFFCF3;text-wrap:pretty">Không tắt máy, không tự xoá dấu vết.</p>
+      </div>
+      <div data-rv="y" data-d="160ms" style="position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;background:#14120D;border:2px solid var(--hz,#FFC629);padding:22px 18px 24px;text-align:center">
+        <span style="position:absolute;top:10px;left:14px;font-weight:900;font-size:17px;color:var(--hz,#FFC629)">03</span>
+        <img src="assets/step-03.png" alt="Báo Security ngay" style="display:block;width:clamp(104px,15vw,148px);height:auto">
+        <p style="margin:0;font-weight:700;font-size:clamp(17px,2.2vw,21px);line-height:1.4;color:#FFFCF3;text-wrap:pretty">Báo Security ngay tại <span style="font-weight:900;background:var(--hz,#FFC629);color:#14120D;padding:1px 6px;border-radius:2px;box-decoration-break:clone;-webkit-box-decoration-break:clone">security.zlp@vng.com.vn</span>.</p>
+      </div>
+    </div>
+    
+  </section>
+
+  <div style="height:14px;background:repeating-linear-gradient(135deg,#E5162C 0 20px,#14120D 20px 40px);animation:tape 2s linear infinite;animation-play-state:var(--anim,running)"></div>
+
+  <footer style="text-align:center;padding:clamp(30px,4vw,46px) 20px clamp(26px,3vw,36px);background:#16130E">
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px">
+      <img src="assets/zalopay-logo.png" alt="Zalopay" style="height: 28px; width: 114px; display: block; opacity: .9">
+    </div>
+    <div style="font-weight:900;font-size:12px;letter-spacing:.2em;color:var(--hz,#FFC629)">AI SECURITY</div>
+    
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;hazard&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#FFC629&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#FFC629&quot;,&quot;#FFD400&quot;,&quot;#FF8D00&quot;,&quot;#A4FF00&quot;],&quot;section&quot;:&quot;Giao diện&quot;},&quot;showRating&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Giao diện&quot;},&quot;animate&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Chuyển động&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this.applyVars();
+    this._t = setTimeout(() => this.setup(), 80);
+    this._safety = setTimeout(() => {
+      document.querySelectorAll('[data-rv]').forEach(e => { e.style.opacity = '1'; e.style.transform = 'none'; });
+    }, 5000);
+  }
+  componentDidUpdate() { this.applyVars(); }
+  componentWillUnmount() {
+    clearTimeout(this._t); clearTimeout(this._safety);
+    if (this.io) this.io.disconnect();
+    if (this.io2) this.io2.disconnect();
+  }
+
+  applyVars() {
+    const r = document.documentElement.style;
+    r.setProperty('--hz', this.props.hazard ?? '#FFC629');
+    r.setProperty('--anim', (this.props.animate ?? true) ? 'running' : 'paused');
+    r.setProperty('--stampd', (this.props.showRating ?? true) ? 'block' : 'none');
+  }
+
+  fmt(v, dec, grp) {
+    let s = dec > 0 ? v.toFixed(dec).replace('.', ',') : String(Math.round(v));
+    if (grp) {
+      const p = s.split(',');
+      s = p[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.') + (p[1] ? ',' + p[1] : '');
+    }
+    return s;
+  }
+
+  countUp(el) {
+    const target = parseFloat(el.dataset.cu);
+    if (isNaN(target)) return;
+    const dec = parseInt(el.dataset.dec || '0', 10);
+    const grp = el.dataset.grp === 'true';
+    const dur = 1150, t0 = performance.now(), self = this;
+    const step = (t) => {
+      const p = Math.min(1, (t - t0) / dur);
+      const e = 1 - Math.pow(1 - p, 3);
+      el.textContent = self.fmt(target * e, dec, grp);
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  setup() {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const on = (this.props.animate ?? true) && !reduce;
+    const rvs = Array.from(document.querySelectorAll('[data-rv]'));
+    if (!on) {
+      rvs.forEach(e => { e.style.opacity = '1'; e.style.transform = 'none'; });
+      return;
+    }
+    this.io = new IntersectionObserver((ents) => {
+      ents.forEach(en => {
+        if (!en.isIntersecting) return;
+        en.target.style.opacity = '1';
+        en.target.style.transform = 'none';
+        this.io.unobserve(en.target);
+      });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.04 });
+    rvs.forEach(e => {
+      if (e.getBoundingClientRect().top < window.innerHeight * 0.94) {
+        e.style.opacity = '1'; e.style.transform = 'none'; return;
+      }
+      const d = e.dataset.d || '0ms';
+      e.style.opacity = '0';
+      e.style.transform = 'translateY(30px)';
+      e.style.transition = 'opacity .65s cubic-bezier(.2,.7,.3,1) ' + d + ', transform .7s cubic-bezier(.2,.7,.3,1) ' + d;
+      this.io.observe(e);
+    });
+    this.io2 = new IntersectionObserver((ents) => {
+      ents.forEach(en => {
+        if (!en.isIntersecting) return;
+        this.countUp(en.target);
+        this.io2.unobserve(en.target);
+      });
+    }, { threshold: 0.35 });
+    document.querySelectorAll('[data-cu]').forEach(e => this.io2.observe(e));
+  }
+
+  hl(s, words) {
+    let parts = [{ text: s }];
+    (words || []).forEach(w => {
+      const out = [];
+      parts.forEach(p => {
+        if (p.hi) { out.push(p); return; }
+        let t = p.text, i;
+        while ((i = t.indexOf(w)) !== -1) {
+          if (i > 0) out.push({ text: t.slice(0, i) });
+          out.push({ hi: w });
+          t = t.slice(i + w.length);
+        }
+        if (t) out.push({ text: t });
+      });
+      parts = out;
+    });
+    return parts;
+  }
+
+  seg(s) {
+    return s.split(/(`[^`]+`|\[[^\]]+\]|\*\*[^*]+\*\*)/).filter(Boolean).map(p =>
+      p.charAt(0) === '`' ? { code: p.slice(1, -1) } :
+      p.charAt(0) === '[' ? { mark: p } :
+      p.slice(0, 2) === '**' ? { b: p.slice(2, -2) } : { text: p });
+  }
+
+  renderVals() {
+    const self = this;
+    const SCAN = [
+      'Chạy lệnh do AI đề xuất mà chưa kiểm tra',
+      'Cài extension chỉ vì nhiều lượt tải',
+      'Đưa file, code hoặc dữ liệu nhạy cảm vào public AI',
+      'Bật auto-approve cho AI agent',
+      'Để AI làm theo chỉ thị trong email, file và website',
+      'Tin vào video/giọng nói deepfake',
+      'Để AI auto-responder tự động xử lý output',
+      'Tải phần mềm AI từ nguồn không xác minh'
+    ];
+    const IMPACT = [
+      'Có thể khiến máy dính mã độc, lộ credential hoặc dữ liệu.',
+      'Extension giả có thể đọc chat, source code và tài liệu nội bộ.\n',
+      'Dữ liệu công ty hoặc dữ liệu khách hàng có thể rời khỏi vùng kiểm soát.\n',
+      'Agent thao tác thẳng trên production, xoá hoặc sửa dữ liệu thật.',
+      'AI bị chỉ thị ẩn điều khiển, tự gửi dữ liệu nội bộ ra ngoài.',
+      'Chuyển tiền hoặc cấp quyền cho kẻ mạo danh, dù không hệ thống nào bị xâm nhập.',
+      'Bot có thể bị lợi dụng để chiếm session hoặc phát tán nội dung độc hại.\n',
+      'Mã độc đánh cắp mật khẩu trình duyệt và ví crypto.'
+    ];
+    const RAW = [
+      {
+        n: '01', rate: 5, hlw: ['2,23 triệu', '19,7%', '43%'],
+        img: window.__res('card02', 'assets/card-02.png'), alt: 'Biển cảnh báo: chạy lệnh do AI đề xuất mà chưa kiểm tra',        scenario: 'AI đưa cho bạn một command hoặc package để sửa lỗi. Vì muốn xử lý nhanh, bạn copy lệnh vào terminal hoặc cài package ngay mà chưa kiểm tra nó thực sự làm gì.',
+        flow: ['AI đề xuất một package không tồn tại.', 'Kẻ xấu đăng ký package đó trước và đưa mã độc vào.', 'Bạn vô tình cài hoặc chạy package bằng quyền đang có trên máy.', 'Mã độc có thể từ đó đánh cắp credential, token, source code hoặc dữ liệu mà bạn có quyền truy cập.'],
+        cons: ['Thiết bị và các tài khoản đang đăng nhập trên máy bị xâm nhập.', 'Credential, token, source code hoặc dữ liệu nội bộ bị đánh cắp.', 'Mã độc có thể tiếp tục ảnh hưởng đến repo, pipeline hoặc hệ thống mà bạn có quyền truy cập.'],
+        note: { label: 'ĐÃ GHI NHẬN NỘI BỘ', text: 'Đã ghi nhận trường hợp chạy trực tiếp output do AI tạo ra mà không kiểm chứng, dẫn đến thiết bị bị xâm nhập và dữ liệu trên máy bị thu thập trái phép.' },
+        statN: 19.7, statDec: 1, statGrp: false, statSuf: '%',
+        proof: 'Nghiên cứu của Spracklen et al. (USENIX Security 2025) phân tích 2,23 triệu đoạn code do 16 mô hình AI tạo ra và phát hiện 19,7% có ít nhất một package không tồn tại; tỷ lệ này ở các mô hình thương mại khoảng 5%. Đáng chú ý, 43% tên package không tồn tại được AI đề xuất lặp lại y nguyên qua 10 lần chạy, tạo cơ hội để kẻ xấu đăng ký các package này trước.',
+        src: 'Spracklen et al., USENIX Security 2025', framing: '',
+        safe: [
+          '**Kiểm tra command:** nếu lệnh có `curl ... | bash`, `iwr ... | iex`, hoặc tải và chạy code trực tiếp → không chạy ngay, kiểm tra lệnh đang làm gì trước.',
+          '**Kiểm tra package:** nếu AI gợi ý package mới → kiểm tra package có thật, publisher là ai, ngày phát hành, lịch sử cập nhật và repository trước khi install.',
+          '**Kiểm tra quyền và hành vi của lệnh:** nếu lệnh có `sudo`, `eval`, `base64`, `chmod +x` hoặc yêu cầu ghi/chạy file ngoài thư mục dự án → dừng lại và kiểm tra trước khi chạy.'
+        ]
+      },
+      {
+        n: '02', rate: 5, hlw: ['AITOPIA', '900.000 lượt tải', '“Featured”'],
+        img: window.__res('card03', 'assets/card-03.png'), alt: 'Biển cảnh báo: cài extension chỉ vì nhiều lượt tải',        scenario: 'Một extension được quảng cáo giúp tóm tắt, hỗ trợ coding hoặc tăng năng suất. Bạn thấy extension có nhiều lượt cài, giao diện uy tín và xuất hiện trên marketplace hoặc mục “Featured”, nên bạn dễ nghĩ rằng nó đã được kiểm tra và an toàn để sử dụng.',
+        flow: ['Extension giả mạo một công cụ AI quen thuộc.', 'Extension yêu cầu quyền truy cập rộng — như đọc các tab, clipboard hoặc workspace.', 'Khi được cấp quyền, extension âm thầm thu thập nội dung chat, source code hoặc tài liệu.', 'Một bản cập nhật sau đó có thể bổ sung mã độc, ngay cả khi phiên bản ban đầu chưa có.'],
+        cons: ['Lộ nội dung trao đổi với AI, source code và tài liệu nội bộ.', 'Token phiên, thông tin đăng nhập hoặc dữ liệu trình duyệt bị đánh cắp.', 'Extension độc hại có thể ảnh hưởng đến nhiều người dùng và thiết bị nếu được cài đặt rộng rãi.'],
+        statN: 900000, statDec: 0, statGrp: true, statSuf: '',
+        proof: 'OX Security phát hiện hai extension Chrome giả mạo AITOPIA, một công cụ AI có thật, có khả năng thu thập nội dung các cuộc trò chuyện với ChatGPT và DeepSeek, trong đó có thể chứa source code, thông tin kinh doanh và trao đổi nội bộ. Hai extension này có tổng cộng hơn 900.000 lượt tải. Đáng chú ý, một trong hai còn được Google Chrome gắn nhãn “Featured”.',
+        src: 'OX Security, 12/2025 · Microsoft Security Blog, 3/2026', framing: '',
+        safe: [
+          '**Kiểm tra publisher:** có phải nhà phát hành chính thức không? Xem ngày phát hành, lịch sử cập nhật và nguồn mã công khai nếu có.',
+          '**Kiểm tra quyền truy cập:** nếu extension yêu cầu quyền đọc toàn bộ workspace, clipboard hoặc mọi tab mà không thực sự cần thiết → đừng tự cài, gửi Security review trước.',
+          '**Dọn extension không còn dùng:** gỡ những extension không cần thiết và thường xuyên kiểm tra lại các extension đang sử dụng.'
+        ]
+      },
+      {
+        n: '03', rate: 5, hlw: ['1/5 tổ chức', 'Shadow AI', '670.000 USD', '65%'],
+        img: window.__res('card04', 'assets/card-04.png'), alt: 'Biển cảnh báo: đưa dữ liệu nhạy cảm vào public AI',        scenario: 'Bạn upload log, hợp đồng, spreadsheet, ảnh chụp màn hình hoặc paste code thật vào AI để phân tích, tóm tắt hoặc debug nhanh hơn.',
+        flow: ['Bạn đưa dữ liệu thật vào public AI.', 'Dữ liệu được gửi đến hệ thống của bên cung cấp AI để xử lý.', 'Bạn không còn trực tiếp kiểm soát dữ liệu được lưu ở đâu, ai có thể truy cập và được giữ lại trong bao lâu.', 'Nếu tài khoản, hệ thống, log hoặc cấu hình của bên cung cấp có vấn đề, dữ liệu có thể bị lộ.'],
+        cons: ['Dữ liệu nội bộ có thể được chia sẻ hoặc lưu trữ ngoài phạm vi kiểm soát của Zalopay.', 'Có thể vi phạm nghĩa vụ bảo vệ dữ liệu cá nhân, cam kết với đối tác/khách hàng hoặc chính sách nội bộ.', 'Sự cố có thể kéo theo chi phí điều tra, khắc phục, thông báo và ảnh hưởng đến niềm tin của khách hàng.'],
+        never: [{ k: 'Dữ liệu khách hàng & giao dịch:', t: 'CMND/CCCD, số điện thoại, hồ sơ KYC, số tài khoản/thẻ, số dư ví, CVV, ngày hết hạn thẻ...' }, { k: 'Thông tin xác thực & hệ thống:', t: 'Password, API key, token, OTP/2FA, thông tin production.' }, { k: 'Thông tin nội bộ:', t: 'Source code, kiến trúc hệ thống, log nội bộ, chiến lược kinh doanh, tài liệu chưa công bố.' }],
+        statN: null, statSuf: '1/5 tổ chức',
+        proof: '1/5 tổ chức trong nghiên cứu của IBM từng gặp sự cố dữ liệu liên quan đến Shadow AI — tức việc sử dụng các công cụ AI chưa được công ty phê duyệt hoặc kiểm soát. Ở các tổ chức có mức sử dụng Shadow AI cao, chi phí trung bình để xử lý một vụ vi phạm dữ liệu cao hơn khoảng 670.000 USD so với các tổ chức có mức sử dụng thấp hoặc không sử dụng. Đáng chú ý, 65% các vụ vi phạm liên quan Shadow AI làm lộ dữ liệu định danh cá nhân (PII), so với 53% ở các vụ vi phạm nói chung.',
+        src: 'IBM Cost of a Data Breach 2025', framing: '',
+        safe: [
+          '**Kiểm tra công cụ AI:** chỉ sử dụng công cụ đã được Zalopay duyệt. Cần thêm tool mới → gửi request cho team Security, không dùng bản public trong lúc chờ.',
+          '**Kiểm tra dữ liệu trước khi paste/upload:** có dữ liệu khách hàng, credential hoặc source code không? Nếu có → không đưa vào public AI.',
+          '**Khử nhận dạng dữ liệu:** nếu cần AI xử lý dữ liệu thật → thay bằng dữ liệu mẫu hoặc dữ liệu đã khử nhận dạng trước khi upload.'
+        ]
+      },
+      {
+        n: '04', rate: 5, hlw: ['xoá database production', '“code freeze”', '1.200 lãnh đạo', '1.190 công ty'],
+        img: window.__res('card05', 'assets/card-05.png'), alt: 'Biển cảnh báo: bật auto-approve cho AI agent',        scenario: 'Để agent làm việc liên tục mà không phải hỏi lại nhiều lần, người dùng bật auto-approve hoặc bỏ qua bước xin quyền. Agent sau đó được chạy trên máy đã có sẵn quyền truy cập production hoặc quyền ghi vào repo chính.',
+        flow: ['Bạn giao cho agent một yêu cầu khá rộng, khiến agent có thể hiểu chưa đúng yêu cầu hoặc thiếu bối cảnh cần thiết.', 'Agent được cấp sẵn quyền để sửa file, chạy lệnh hoặc thao tác trên hệ thống thật.', 'Auto-approve khiến các quyết định quan trọng không còn bước kiểm tra của bạn trước khi thực hiện.', 'Agent có thể thực hiện nhiều thay đổi liên tiếp nhanh hơn khả năng phát hiện và dừng lại của bạn.'],
+        cons: ['Dữ liệu production có thể bị xoá hoặc sửa ngoài dự kiến.', 'Code không an toàn có thể được đưa vào repo, credential có thể bị sử dụng nhầm hoặc xảy ra những thao tác không thể hoàn tác.', 'Agent có thể đánh giá sai và báo rằng hành động đã an toàn hoặc có thể khôi phục, khiến việc xử lý sự cố bị chậm trễ'],
+        statN: 1200, statDec: 0, statGrp: true, statSuf: '+',
+        proof: 'Tháng 7/2025, Replit – nền tảng lập trình online tích hợp AI Agent – đã gặp sự cố khi AI Agent xoá database production trong lúc hệ thống đang ở trạng thái “code freeze”, làm mất dữ liệu của hơn 1.200 lãnh đạo và hơn 1.190 công ty. Agent sau đó thừa nhận đã thực hiện các lệnh trái phép và vi phạm chỉ thị không được tiếp tục nếu chưa có sự xác nhận của con người. Ban đầu, agent còn báo rằng dữ liệu không thể rollback, nhưng dữ liệu sau đó đã được khôi phục.',
+        src: 'Fortune, 7/2025', framing: '',
+        safe: [
+          '**Kiểm tra quyền của agent:** không bật auto-approve hoặc bỏ qua bước xin quyền khi agent có quyền truy cập production hoặc repo chính.',
+          '**Kiểm tra hành động của agent:** xác nhận các hành động quan trọng trước khi agent thực hiện.',
+          '**Giới hạn quyền truy cập:** chạy agent trong sandbox/container và chỉ cấp những quyền thực sự cần thiết.'
+        ]
+      },
+      {
+        n: '05', rate: 4, hlw: ['EchoLeak', 'CVSS 9.3', 'không cần mở email hay click vào link'],
+        img: window.__res('card06', 'assets/card-06.png'), alt: 'Biển cảnh báo: chỉ thị ẩn trong email, file và website',        scenario: 'Bạn yêu cầu AI đọc một PDF, email hoặc website bên ngoài, trong khi AI đồng thời có quyền truy cập vào file, email, kho nội bộ hoặc các công cụ khác.',
+        flow: ['Kẻ tấn công chèn một chỉ thị vào email, file hoặc website.', 'AI đọc nội dung đó cùng với phần thông tin bạn yêu cầu nó xử lý.', 'AI có thể hiểu nhầm chỉ thị này là yêu cầu cần thực hiện và làm những việc ngoài nhiệm vụ ban đầu.', 'Nếu AI có quyền truy cập dữ liệu hoặc công cụ cần thiết, nó có thể gửi dữ liệu ra ngoài mà bạn không cần trực tiếp bấm vào link hay thực hiện thêm thao tác nào.'],
+        cons: ['Email, tài liệu hoặc dữ liệu mà bạn có quyền truy cập có thể bị lộ.', 'AI có thể tạo link, gửi nội dung hoặc truy cập tài nguyên ngoài ý muốn.', 'Sự cố có thể khó nhận biết vì chỉ thị độc hại thường được ẩn trong nội dung mà bạn đang yêu cầu AI đọc.'],
+        statN: null, statSuf: 'CVSS 9.3',
+        proof: 'EchoLeak (CVE-2025-32711, CVSS 9.3) là một lỗ hổng nghiêm trọng trên Microsoft 365 Copilot. Kẻ tấn công có thể gửi email chứa chỉ thị ẩn; khi người dùng sau đó yêu cầu Copilot xử lý nội dung liên quan, Copilot có thể làm theo chỉ thị đó và đưa dữ liệu nhạy cảm ra ngoài mà người dùng không cần mở email hay click vào link. Microsoft đã vá lỗ hổng và cho biết chưa ghi nhận việc lỗ hổng bị khai thác thực tế.',
+        src: 'Aim Security, 06/2025 · Microsoft Security Response Center', framing: '',
+        safe: [
+          '**Kiểm tra quyền của AI:** không để AI vừa đọc file/email/web từ bên ngoài, vừa có quyền truy cập hệ thống nội bộ trong cùng một phiên.',
+          '**Kiểm tra nguồn của chỉ thị:** khi AI đề xuất hành động sau khi đọc tài liệu bên ngoài → xác định đề xuất đó đến từ yêu cầu của bạn hay từ nội dung tài liệu.',
+          '**Kiểm tra hành động bất thường:** nếu AI đột nhiên đề nghị tải, gửi, truy cập hoặc xác thực thứ bạn không yêu cầu, hoặc trả lời chệch khỏi nhiệm vụ ban đầu → dừng lại và kiểm tra ngay.'
+        ]
+      },
+      {
+        n: '06', rate: 4, hlw: ['đều là deepfake', '25,6 triệu USD', 'không có hệ thống nội bộ nào bị xâm nhập'],
+        img: window.__res('card07', 'assets/card-07.png'), alt: 'Biển cảnh báo: tin vào video hoặc giọng nói deepfake',        scenario: 'Một người tự nhận là lãnh đạo hoặc đồng nghiệp gọi video, tạo cảm giác khẩn cấp và yêu cầu chuyển tiền, chia sẻ credential, cung cấp dữ liệu hoặc bỏ qua quy trình bình thường.',
+        flow: ['Kẻ xấu thu thập hình ảnh, giọng nói và thông tin về tổ chức.', 'AI được dùng để tạo khuôn mặt, giọng nói hoặc cuộc gọi video giả.', 'Nhiều nhân vật giả có thể cùng xuất hiện để khiến cuộc gọi trông đáng tin hơn.', 'Bạn thực hiện yêu cầu vì tin rằng hình ảnh và giọng nói đã đủ để xác minh danh tính.'],
+        cons: ['Chuyển tiền, phê duyệt giao dịch hoặc cấp quyền cho sai đối tượng.', 'Lộ thông tin đăng nhập, dữ liệu khách hàng hoặc thông tin nội bộ.', 'Sự cố có thể không để lại dấu hiệu rõ ràng trên hệ thống để SOC phát hiện; lớp phòng thủ quan trọng nằm ở quy trình xác minh của con người.'],
+        statN: 25.6, statDec: 1, statGrp: false, statSuf: 'M USD',
+        proof: 'Tháng 1/2024, một nhân viên tài chính của Arup tại Hong Kong tham gia cuộc họp video với người tự nhận là CFO và các đồng nghiệp. Tất cả những người xuất hiện trong cuộc họp đều là deepfake. Tin rằng đây là cuộc họp thật, nhân viên đã thực hiện 15 giao dịch chuyển tiền, với tổng giá trị khoảng 200 triệu HKD (khoảng 25,6 triệu USD). Đáng chú ý, Arup xác nhận không có hệ thống nội bộ nào bị xâm nhập trong vụ việc.',
+        src: 'CNN, 5/2024', framing: '',
+        safe: [
+          '**Kiểm tra yêu cầu:** không phê duyệt giao dịch hoặc cấp quyền truy cập chỉ dựa trên một cuộc gọi video, kể cả khi bạn thấy mặt và nghe đúng giọng của người quen.',
+          '**Xác minh danh tính:** cúp máy và gọi lại qua số hoặc kênh liên lạc bạn đã có sẵn. Không sử dụng số điện thoại hoặc link do người gọi cung cấp.',
+          '**Kiểm tra dấu hiệu bất thường:** nếu yêu cầu vừa khẩn cấp, bí mật và không muốn bạn xác minh với người khác → dừng lại và xác minh qua một kênh khác trước khi thực hiện.'
+        ]
+      },
+      {
+        n: '07', rate: 3, hlw: ['400 ký tự', 'session cookie', 'không cần mật khẩu'],
+        img: window.__res('card08', 'assets/card-08.png'), alt: 'Biển cảnh báo: AI auto-responder tự động xử lý output',        scenario: 'Bot CSKH hoặc trợ lý nội bộ tự động đọc nội dung từ khách hàng, tạo câu trả lời có HTML/link rồi hiển thị hoặc gửi trực tiếp cho nhân viên hoặc khách hàng mà không kiểm tra và lọc nội dung trước.',
+        flow: ['Kẻ xấu gửi nội dung được thiết kế để đánh lừa bot và khiến bot làm khác đi so với mục đích ban đầu.', 'Bot đưa nội dung đó vào câu trả lời hoặc HTML mà nó tạo ra.', 'Link hoặc đoạn mã độc xuất hiện trong giao diện mà nhân viên/khách hàng tin tưởng.', 'Khi người dùng tương tác với nội dung đó, session, quyền truy cập hoặc dữ liệu có thể bị ảnh hưởng.'],
+        cons: ['Session của nhân viên hỗ trợ bị chiếm mà không cần biết mật khẩu.', 'Bot tự phát tán link độc hại hoặc nội dung sai tới khách hàng.', 'Khi bot tự động xử lý và gửi output, một lỗi có thể lan nhanh hơn và ảnh hưởng đến nhiều người hơn.'],
+        statN: 400, statDec: 0, statGrp: false, statSuf: ' ký tự',
+        proof: 'Tháng 8/2025, chatbot CSKH “Lena” của Lenovo được phát hiện có thể bị đánh lừa bằng một prompt dài khoảng 400 ký tự để tạo ra HTML độc hại. HTML này có thể lấy session cookie của nhân viên hỗ trợ, từ đó cho phép kẻ tấn công sử dụng phiên đăng nhập mà không cần mật khẩu. Lenovo đã khắc phục lỗ hổng trước khi công bố.',
+        src: 'Cybernews, 8/2025', framing: '',
+        safe: [
+          '**Kiểm soát đầu vào:** không để bot vừa nhận nội dung từ khách hàng vừa tự tạo và hiển thị HTML/link mà không có bước kiểm tra.',
+          '**Kiểm soát hành động của bot:** lọc và xử lý an toàn toàn bộ output của AI trước khi hiển thị; không cho phép bot tự tạo và phát tán link chưa được kiểm duyệt',
+          '**Theo dõi hoạt động:** ghi nhận output và hành động của bot, đồng thời review định kỳ để phát hiện bất thường.'
+        ]
+      },
+      {
+        n: '08', rate: 3, hlw: ['Noodlophile', '62.000 lượt xem'],
+        img: window.__res('card09', 'assets/card-09.png'), alt: 'Biển cảnh báo: tải phần mềm AI từ nguồn không xác minh',        scenario: 'Bạn thấy quảng cáo về một công cụ AI tạo video/ảnh “miễn phí”, truy cập một website trông chuyên nghiệp rồi được yêu cầu tải file .exe, .zip hoặc “kết quả AI” về máy.',
+        flow: ['Quảng cáo hoặc kết quả tìm kiếm đưa bạn tới một website giả.', 'Website mô phỏng quy trình tạo nội dung AI để khiến bạn tin rằng công cụ đang hoạt động thật.', 'Website yêu cầu tải một file được nguỵ trang thành phần mềm hoặc kết quả AI.', 'Khi bạn mở file, mã độc có thể đánh cắp password, cookie, thông tin đăng nhập và dữ liệu ví crypto trên thiết bị.'],
+        cons: ['Mất password, cookie, thông tin đăng nhập và quyền truy cập tài khoản.', 'Thiết bị có thể trở thành cổng vào để kẻ xấu tiếp cận hệ thống công ty.', 'Kẻ xấu có thể sử dụng tài khoản thật để tiếp tục lừa đảo đồng nghiệp hoặc khách hàng.'],
+        statN: 62000, statDec: 0, statGrp: true, statSuf: ' lượt xem',
+        proof: 'Noodlophile là một loại mã độc đánh cắp thông tin được phát tán qua các website AI tạo video giả. Người dùng được dụ upload ảnh/video và tải “kết quả AI” về máy — nhưng file tải xuống thực chất chứa malware có thể đánh cắp mật khẩu trình duyệt, cookie, token và ví crypto. Một bài đăng quảng bá chiến dịch trên Facebook đã đạt hơn 62.000 lượt xem.',
+        src: 'Morphisec, 5/2025', framing: '',
+        safe: [
+          '**Kiểm tra nguồn tải:** chỉ tải phần mềm từ website chính thức của nhà phát hành.',
+          '**Kiểm tra dấu hiệu bất thường:** quảng cáo “AI miễn phí” yêu cầu tải .exe / .zip để nhận kết quả → đóng tab và không tải file.',
+          '**Báo Security khi nghi ngờ:** đã tải file nhưng thấy bất thường → không mở hoặc thực thi. Nếu đã mở file → báo ngay Security qua security.zlp@vng.com.vn để được hướng dẫn.'
+        ]
+      }
+    ];
+
+    const risks = RAW.map((r, idx) => ({
+      i: idx + 1,
+      n: r.n, title: SCAN[idx].replace(/\.$/, '').toUpperCase(), img: r.img, alt: r.alt,
+      scenario: r.scenario,
+      flow: r.flow.map((t, k) => ({ i: k + 1, t: t })),
+      cons: r.cons,
+      never: r.never || null,
+      note: null,
+      statN: r.statN != null ? r.statN : null,
+      statDec: r.statDec || 0,
+      statGrp: !!r.statGrp,
+      statNum: r.statN != null ? self.fmt(r.statN, r.statDec || 0, !!r.statGrp) : '',
+      statSuf: r.statSuf,
+      scan: SCAN[idx], impact: IMPACT[idx],
+      scanImg: 'assets/img/scan/sign-0' + (idx + 2) + '.png',
+      proof: r.proof, src: r.src, framing: r.framing,
+      safe: r.safe.map(s => ({ seg: self.seg(s) })),
+      sv: '#FCD820',
+      svtx: '#14120D',
+      shd: 'rgba(0,0,0,.5)',
+      consBg: '#FBF0D2',
+      rate: r.rate,
+      rateC: '#B08000',
+      gauge: (r.rate / 5) * 50,
+      proofSeg: self.hl(r.proof, r.hlw)
+    }));
+
+    return { risks: risks };
+  }
+}
+</script>
+</body>
+</html>
